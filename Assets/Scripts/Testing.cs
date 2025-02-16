@@ -35,8 +35,8 @@ public class Testing : MonoBehaviour
 				}
 			}
 		}
-		Debug.Log(Areas[randomIndexX, randomIndexY].transform.position.x);
-		Debug.Log(Areas[randomIndexX, randomIndexY].transform.position.y);
+		//Debug.Log(Areas[randomIndexX, randomIndexY].transform.position.x);
+		//Debug.Log(Areas[randomIndexX, randomIndexY].transform.position.y);
 
 	}
 
