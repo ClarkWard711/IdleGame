@@ -7,5 +7,5 @@ public class Areas : MonoBehaviour
 {
 	public int x;
 	public int y;
-	public int id;
+	public int ID;
 }
