@@ -32,7 +32,6 @@ public class Testing : MonoBehaviour
 		foreach (Grid Grid in Areas[randomIndexX, randomIndexY].GetComponentsInChildren<Grid>())
 		{
 			Grid.gameObject.GetComponent<BoxCollider2D>().enabled = true;
-			Grid.isLocked = false;
 		}
 		//给所有的grid赋值x,y
 		foreach (GameObject area in Areas)

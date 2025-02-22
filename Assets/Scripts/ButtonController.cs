@@ -5,8 +5,16 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
+	public static ButtonController Instance;
 	public GameObject BuildingPanel, ResearchPanel, AchievementPanel, SettingPanel, MainPanel;
-	public Button BuildingButton, ResearchButton, AchievementButton, SettingButton, CloseButton;
+	public Button BuildingButton, ResearchButton, AchievementButton, SettingButton, CloseButton, CancelButton, ConfirmButton;
+	private void Awake()
+	{
+		if (Instance == null)
+		{
+			Instance = this;
+		}
+	}
 
 	private void Start()
 	{
@@ -15,6 +23,7 @@ public class ButtonController : MonoBehaviour
 		AchievementButton.onClick.AddListener(OnAchievementButtonClick);
 		SettingButton.onClick.AddListener(OnSettingButtonClick);
 		CloseButton.onClick.AddListener(OnCloseButtonClick);
+		CancelButton.onClick.AddListener(OnCancelButtonClick);
 	}
 	public void OnBuildingButtonClick()
 	{
@@ -55,5 +64,11 @@ public class ButtonController : MonoBehaviour
 		AchievementPanel.SetActive(false);
 		SettingPanel.SetActive(false);
 		MainPanel.SetActive(false);
+	}
+	public void OnCancelButtonClick()
+	{
+		BuildingController.Instance.isGoingToBuild = false;
+		BuildingController.Instance.BuildingIDOnLoad = -1;
+		CancelButton.gameObject.SetActive(false);
 	}
 }

@@ -25,5 +25,7 @@ public class BuildingButtonSetUp : MonoBehaviour
 	{
 		BuildingController.Instance.BuildingIDOnLoad = ID;
 		BuildingController.Instance.isGoingToBuild = true;
+		ButtonController.Instance.OnCloseButtonClick();
+		ButtonController.Instance.CancelButton.gameObject.SetActive(true);
 	}
 }
