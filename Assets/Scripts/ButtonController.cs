@@ -24,6 +24,7 @@ public class ButtonController : MonoBehaviour
 		SettingButton.onClick.AddListener(OnSettingButtonClick);
 		CloseButton.onClick.AddListener(OnCloseButtonClick);
 		CancelButton.onClick.AddListener(OnCancelButtonClick);
+		ConfirmButton.onClick.AddListener(OnConfirmButtonClick);
 	}
 	public void OnBuildingButtonClick()
 	{
@@ -70,5 +71,12 @@ public class ButtonController : MonoBehaviour
 		BuildingController.Instance.isGoingToBuild = false;
 		BuildingController.Instance.BuildingIDOnLoad = -1;
 		CancelButton.gameObject.SetActive(false);
+	}
+	public void OnConfirmButtonClick()
+	{
+		BuildingController.Instance.isGoingToBuild = false;
+		BuildingController.Instance.BuildingIDOnLoad = -1;
+		CancelButton.gameObject.SetActive(false);
+		//执行建造
 	}
 }

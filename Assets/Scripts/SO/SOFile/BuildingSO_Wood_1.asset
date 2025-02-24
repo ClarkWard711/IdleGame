@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: BuildingSO_Wood_1
   m_EditorClassIdentifier: 
   BuildingSprite: {fileID: 0}
-  BuildingName: 
-  BuildingDescription: 
-  BuildingWoodCost: 0
+  BuildingName: "\u6728\u65A7\u4F10\u6728\u573A"
+  BuildingDescription: "\u539F\u6728"
+  BuildingWoodCost: 10
   BuildingStoneCost: 0
   BuildingIronCost: 0
   BuildingID: 0
-  BuildingProduction: 0
+  BuildingProduction: 4

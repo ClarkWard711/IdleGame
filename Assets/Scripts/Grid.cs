@@ -66,6 +66,23 @@ public class Grid : MonoBehaviour, IPointerClickHandler
 			else
 			{
 				//增加对应可获取资源
+				if (state == State.Wood || state == State.All || state == State.WoodAndStone || state == State.WoodAndIron)
+				{
+					//增加木材
+					ResourceController.Instance.AddResource("Wood", ResourceController.Instance.HandPointWoodAdd);
+				}
+				//增加点按可否采集石头的判定
+				if (state == State.Stone || state == State.All || state == State.WoodAndStone || state == State.StoneAndIron)
+				{
+					//增加石头
+					ResourceController.Instance.AddResource("Stone", ResourceController.Instance.HandPointStoneAdd);
+				}
+				//增加点按可否采集铁矿的判定
+				if (state == State.Iron || state == State.All || state == State.WoodAndIron || state == State.StoneAndIron)
+				{
+					//增加铁矿
+					ResourceController.Instance.AddResource("Iron", ResourceController.Instance.HandPointIronAdd);
+				}
 			}
 		}
 	}
